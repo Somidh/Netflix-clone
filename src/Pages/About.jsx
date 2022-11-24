@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Movie from '../component/Movie'
+import { useParams } from 'react-router-dom'
+import requests from '../Request'
+import axios from 'axios'
 
-const About = ({title, detail}) => {
+const About = () => {
+const [movieDetail, setMovieDetail] = useState()
+  const {id} = useParams()
+  const fetchURL = `https://api.themoviedb.org/3/movie/${id}?api_key=6cd1b828745bc502298b15a5b7951e4d&language=en-US`
+    useEffect(() => {
+      axios.get(fetchURL).then(res => {
+        setMovieDetail(res.data)
+      })
+  }, [fetchURL])
 
-    console.log(title)
+  console.log(movieDetail)
 
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <p className='text-white'>{title}</p>
-      <h1 className='text-white'>I am in about</h1>
-      <p className='text-white'>the title is {title}</p>
-      <p className='text-white'>the is {detail}</p>
+        <p className='text-white'>{movieDetail?.title}</p>
     </div>
   )
 }

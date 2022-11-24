@@ -22,7 +22,7 @@ function App() {
             <ProtectedRoute>
               <Account />
             </ProtectedRoute>} />
-          <Route path='/about' element={<About />} />
+          <Route path='/movie/:id' element={<About />} />
         </Routes>
       </AuthContextProvider>
 
