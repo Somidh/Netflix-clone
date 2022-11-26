@@ -8,12 +8,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID
+    apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_APP_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_APP_FIREBASE_SENDER,
+    appId: import.meta.env.VITE_APP_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
@@ -22,17 +22,17 @@ export const auth = getAuth(app);
 export const db = getFirestore(app)
 
 
-// apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-// authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-// projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-// storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-// messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER,
-// appId: process.env.REACT_APP_FIREBASE_APP_ID
+// apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
+// authDomain: import.meta.env.VITE_APP_FIREBASE_AUTH_DOMAIN,
+// projectId: import.meta.env.VITE_APP_FIREBASE_PROJECT_ID,
+// storageBucket: import.meta.env.VITE_APP_FIREBASE_STORAGE_BUCKET,
+// messagingSenderId: import.meta.env.VITE_APP_FIREBASE_SENDER,
+// appId: import.meta.env.VITE_APP_FIREBASE_APP_ID
 
-// REACT_APP_FIREBASE_API_KEY: AIzaSyBde7GlXVf2_Jo18OajXwgkOySa3543uQU
-// REACT_APP_FIREBASE_AUTH_DOMAIN: netflix-react-clone-14dab.firebaseapp.com
-// REACT_APP_FIREBASE_PROJECT_ID: netflix-react-clone-14dab
-// REACT_APP_FIREBASE_STORAGE_BUCKET: netflix-react-clone-14dab.appspot.com
-// REACT_APP_FIREBASE_SENDER: 781496191349
-// REACT_APP_FIREBASE_APP_ID: 1:781496191349:web:ae9661df43d027c1882b3c
+// VITE_APP_FIREBASE_API_KEY: AIzaSyBde7GlXVf2_Jo18OajXwgkOySa3543uQU
+// VITE_APP_FIREBASE_AUTH_DOMAIN: netflix-VITE-clone-14dab.firebaseapp.com
+// VITE_APP_FIREBASE_PROJECT_ID: netflix-VITE-clone-14dab
+// VITE_APP_FIREBASE_STORAGE_BUCKET: netflix-VITE-clone-14dab.appspot.com
+// VITE_APP_FIREBASE_SENDER: 781496191349
+// VITE_APP_FIREBASE_APP_ID: 1:781496191349:web:ae9661df43d027c1882b3c
 
